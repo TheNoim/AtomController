@@ -13,6 +13,6 @@ In this project I try to make a smart home interface.
 
 ```bash
 npm install
-node_modules/.bin/electron-rebuild.cmd
-node_modules/.bin/bower install
+electron-rebuild.cmd
+install-bower.cmd
 ```
