@@ -93,3 +93,6 @@ jspm_packages
 .idea/deployment.xml
 .idea/modules.xml
 .idea/workspace.xml
+
+### Bower
+bower/

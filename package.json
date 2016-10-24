@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/TheNoim/AtomController#readme",
   "devDependencies": {
+    "bower": "^1.7.9",
     "electron": "^1.4.1",
     "electron-rebuild": "^1.3.0"
   }
