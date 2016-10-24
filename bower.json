@@ -1,0 +1,27 @@
+{
+  "name": "atom-controller",
+  "description": "A smart home controller",
+  "main": "main.js",
+  "authors": [
+    "Noim <nilsbergmann@noim.io>"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "smart",
+    "home",
+    "smarthome",
+    "electron"
+  ],
+  "homepage": "https://github.com/TheNoim/AtomController",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.1"
+  }
+}
