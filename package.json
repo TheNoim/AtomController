@@ -1,0 +1,25 @@
+{
+  "name": "atom-controller",
+  "version": "0.0.1",
+  "description": "A smart home controller",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheNoim/AtomController.git"
+  },
+  "keywords": [
+    "smart",
+    "home",
+    "smarthome",
+    "electron"
+  ],
+  "author": "Noim <nilsbergmann@noim.io>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TheNoim/AtomController/issues"
+  },
+  "homepage": "https://github.com/TheNoim/AtomController#readme"
+}
