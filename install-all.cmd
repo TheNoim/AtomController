@@ -1,3 +1,4 @@
-npm install
-electron-rebuild.cmd
-install-bower.cmd
+call npm install
+call electron-rebuild.cmd
+call install-bower.cmd
+PAUSE

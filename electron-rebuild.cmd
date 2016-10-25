@@ -1,1 +1,1 @@
-node_modules/.bin/electron-rebuild.cmd
+call "node_modules/.bin/electron-rebuild.cmd"

@@ -1,1 +1,1 @@
-node_modules/.bin/bower.cmd install
+call "node_modules/.bin/bower.cmd" install
