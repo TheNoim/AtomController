@@ -11,8 +11,4 @@ In this project I try to make a smart home interface.
 ```
 #### Windows
 
-```bash
-npm install
-electron-rebuild.cmd
-install-bower.cmd
-```
+Open install-all.cmd
