@@ -5,10 +5,11 @@ var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var clean = require('gulp-clean');
 var vulcanize = require('gulp-vulcanize');
+var gulpSequence = require('gulp-sequence');
 
-gulp.task('default', ['clean','minify-inline']);
+gulp.task('default', gulpSequence('clean','minify','copy-nodejs'));
 
-gulp.task('minify-inline', function() {
+gulp.task('minify', function() {
     gulp.src('src/*.html')
         .pipe(vulcanize({
             abspath: '',
@@ -18,6 +19,10 @@ gulp.task('minify-inline', function() {
         }))
         .pipe(htmlmin({collapseWhitespace: true,minifyCSS: true, removeComments: true}))
         .pipe(gulp.dest('build/'))
+});
+
+gulp.task('copy-nodejs', function () {
+    gulp.src('src/nodejs/*').pipe(gulp.dest('build/nodejs/'));
 });
 
 gulp.task('clean', function () {
