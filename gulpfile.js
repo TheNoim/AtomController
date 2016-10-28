@@ -6,6 +6,7 @@ var htmlmin = require('gulp-htmlmin');
 var clean = require('gulp-clean');
 var vulcanize = require('gulp-vulcanize');
 var gulpSequence = require('gulp-sequence');
+var jeditor = require("gulp-json-editor");
 
 gulp.task('default', gulpSequence('clean','minify','copy-nodejs', 'main', 'package'));
 
@@ -35,5 +36,10 @@ gulp.task('main', function () {
 });
 
 gulp.task('package', function () {
-    gulp.src('src/package.json').pipe(gulp.dest('www/'));
+    gulp.src('./package.json')
+        .pipe(jeditor(function(json) {
+            json.build = undefined;
+            return json;
+        }))
+        .pipe(gulp.dest('www/'));
 });
