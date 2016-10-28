@@ -1,2 +1,6 @@
+@echo off
 set DEBUG=*
-node_modules/.bin/electron.cmd ./www
+echo Build with gulp...
+call "gulp.cmd"
+echo Start electron...
+call "node_modules/.bin/electron.cmd ./www"
