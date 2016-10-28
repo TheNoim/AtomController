@@ -38,6 +38,8 @@
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
     "angular-aria": "^1.5.8",
-    "debug": "^2.2.0"
+    "async": "^2.1.2",
+    "debug": "^2.2.0",
+    "electron-json-storage": "^2.0.3"
   }
 }
