@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-DEBUG=* node_modules/.bin/electron .
+DEBUG=* node_modules/.bin/electron ./www

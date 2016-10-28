@@ -15,7 +15,7 @@ app.on('ready', () => {
     Window.on('closed', () => {
         app.quit();
     });
-    Window.loadURL(`file://${__dirname}/build/index.html`);
+    Window.loadURL(`file://${__dirname}/index.html`);
 });
 
 app.on('window-all-closed', () => {

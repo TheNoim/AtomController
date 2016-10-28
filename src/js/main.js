@@ -5,6 +5,7 @@
 /*
     Angular main module
  */
+const async = require('async');
 const ang = angular.module('AtomApp', ['ngMaterial', 'ngAnimate', 'ngFx', 'ui.router']);
 
 /*

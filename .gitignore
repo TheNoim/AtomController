@@ -99,3 +99,7 @@ bower/
 build/
 
 config.json
+
+dist/
+
+www/

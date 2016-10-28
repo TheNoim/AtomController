@@ -1,2 +1,2 @@
 set DEBUG=*
-node_modules/.bin/electron.cmd .
+node_modules/.bin/electron.cmd ./www
