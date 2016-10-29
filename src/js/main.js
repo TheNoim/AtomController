@@ -6,7 +6,11 @@
     Angular main module
  */
 const async = require('async');
+const debugMenu = require('debug-menu');
 const ang = angular.module('AtomApp', ['ngMaterial', 'ngAnimate', 'ngFx', 'ui.router']);
+const {ipcRenderer} = require('electron');
+
+debugMenu.install();
 
 /*
     Main Controller
