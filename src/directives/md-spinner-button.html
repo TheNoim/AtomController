@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<md-button ng-click="executeButton()" flex ng-disabled="showSpinner" class="fx-fade-normal fx-speed-1000" ng-style="buttonStyle" ng-class="buttonClass" style="height: 36px" aria-label="{{text}}">
+    <span ng-hide="showSpinner" class="fx-fade-normal fx-speed-1000" ng-style="textStyle" ng-class="textClass">{{text}}</span>
+    <md-progress-circular style="margin: auto;margin-top: 0px;" ng-style="spinnerStyle" ng-class="spinnerClass" md-mode="indeterminate" md-diameter="20" ng-show="showSpinner" class="fx-fade-normal fx-speed-2000"></md-progress-circular>
+</md-button>

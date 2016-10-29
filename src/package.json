@@ -43,9 +43,5 @@
     "async": "^2.1.2",
     "debug": "^2.2.0",
     "electron-json-storage": "^2.0.3"
-  },
-  "build": {
-    "appId": "io.noim.${name}",
-    "productName": "Atom Controller"
   }
 }

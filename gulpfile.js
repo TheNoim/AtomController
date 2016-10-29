@@ -8,22 +8,22 @@ var vulcanize = require('gulp-vulcanize');
 var gulpSequence = require('gulp-sequence');
 var jeditor = require("gulp-json-editor");
 
-gulp.task('default', gulpSequence('clean','minify','copy-nodejs', 'main', 'package'));
+gulp.task('default', gulpSequence('clean','minify','copy-scripts', 'main', 'package'));
 
 gulp.task('minify', function() {
-    gulp.src('src/*.html')
+    gulp.src('src/**/*.html')
         .pipe(vulcanize({
             abspath: '',
             excludes: [],
             inlineScripts: true,
             inlineCss: true
         }))
-        .pipe(htmlmin({collapseWhitespace: true,minifyCSS: true, removeComments: true}))
+        .pipe(htmlmin({collapseWhitespace: true,minifyCSS: true, removeComments: true, minifyJS: true, collapseBooleanAttributes: true}))
         .pipe(gulp.dest('www/'))
 });
 
-gulp.task('copy-nodejs', function () {
-    gulp.src('src/nodejs/*').pipe(gulp.dest('www/nodejs/'));
+gulp.task('copy-scripts', function () {
+    gulp.src('src/**/*.js').pipe(gulp.dest('www/'));
 });
 
 gulp.task('clean', function () {

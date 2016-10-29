@@ -11,8 +11,15 @@ const ang = angular.module('AtomApp', ['ngMaterial', 'ngAnimate', 'ngFx', 'ui.ro
 /*
     Main Controller
  */
-ang.controller('AtomApp', ($scope) => {
-
+ang.controller('AtomApp', ($scope, $state) => {
+    $scope.test = function (cb) {
+        setTimeout(function () {
+            cb();
+        }, 3000);
+    };
+    setTimeout(() => {
+        $state.go('rethinkdb');
+    }, 1000);
 });
 
 
@@ -25,9 +32,14 @@ ang.config(($stateProvider,$urlRouterProvider) => {
 
     const loading = {
         url: '/loading',
-        templateUrl: 'loading.html'
+        templateUrl: 'routs/loading.html'
+    };
+    const rethinkdb_setup = {
+        url: '/setup/rethinkdb',
+        templateUrl: 'routs/rethinkdb_setup.html'
     };
 
 
     $stateProvider.state('loading', loading);
+    $stateProvider.state('rethinkdb', rethinkdb_setup);
 });

@@ -1,0 +1,20 @@
+.main-color-bg {
+    background-color: darkcyan !important;
+}
+.main-color {
+    color: darkcyan !important;
+}
+
+.sec-color-bg {
+    background-color: cyan !important;
+    border-color: cyan !important;
+}
+
+.sec-color {
+    color: cyan !important;
+    border-color: cyan !important;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: cyan;
+}
