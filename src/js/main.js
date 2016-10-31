@@ -8,7 +8,7 @@
 const async = require('async');
 const debugMenu = require('debug-menu');
 const ang = angular.module('AtomApp', ['ngMaterial', 'ngAnimate', 'ngFx', 'ui.router']);
-const {ipcRenderer} = require('electron');
+const { ipcRenderer } = require('electron');
 
 debugMenu.install();
 
@@ -16,8 +16,8 @@ debugMenu.install();
     Main Controller
  */
 ang.controller('AtomApp', ($scope, $state) => {
-    $scope.test = function (cb) {
-        setTimeout(function () {
+    $scope.test = function(cb) {
+        setTimeout(function() {
             cb();
         }, 3000);
     };
@@ -30,7 +30,7 @@ ang.controller('AtomApp', ($scope, $state) => {
 /*
     UI-Router configuration
  */
-ang.config(($stateProvider,$urlRouterProvider) => {
+ang.config(($stateProvider, $urlRouterProvider) => {
 
     $urlRouterProvider.otherwise('/loading');
 
@@ -42,7 +42,6 @@ ang.config(($stateProvider,$urlRouterProvider) => {
         url: '/setup/rethinkdb',
         templateUrl: 'routs/rethinkdb_setup.html'
     };
-
 
     $stateProvider.state('loading', loading);
     $stateProvider.state('rethinkdb', rethinkdb_setup);

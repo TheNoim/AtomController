@@ -1,14 +1,14 @@
 /**
  * Created by herrb on 25.10.2016.
  */
-const {app, BrowserWindow, ipcMain} = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const Debug = require('debug');
 const mainDebug = Debug('Main');
 const ipcDebug = Debug('ipcMain');
 
 app.on('ready', () => {
     mainDebug(`App is ready.`);
-    const {screen} = require('electron');
+    const { screen } = require('electron');
     const display = screen.getPrimaryDisplay();
     mainDebug(`Primary Display: ${JSON.stringify(display.workAreaSize)}`);
     const Window = new BrowserWindow({
@@ -23,7 +23,7 @@ app.on('ready', () => {
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
-        app.quit()
+        app.quit();
     }
 });
 

@@ -1,6 +1,6 @@
-@echo off
-echo Build gulp
-call gulp.cmd
+{
+    "esversion": 6
+}all gulp.cmd
 echo Start building process
 call "node_modules/.bin/build.cmd"
 PAUSE
